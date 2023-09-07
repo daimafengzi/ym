@@ -131,6 +131,7 @@ async function taskUrl() {
 			//console.log(optionss)
 			//console.log(data.errorMsg)
 			DoubleLog(`助力结果：`+data);
+		  console.log(JSON.stringify(data))
           }
         }
       } catch (e) {
