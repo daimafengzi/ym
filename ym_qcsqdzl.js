@@ -49,15 +49,15 @@ async function tips(qcsAuthorizationArr) {
 		qcsunionIdCk = qcsunionIdArr[index].split("&");
 		//console.log(qcsAuthorizationCk);
 		//console.log(qcsunionIdCk);
-		taskIdinviterId=`{"unionId":"`+qcsunionIdCk[index]+`","isSorttion":false,"inviterId":"`+taskIdArr[0]+`","taskId":"`+inviterIdArr[0]+`"}`
+		taskIdinviterId=`{"unionId":"`+qcsunionIdCk+`","isSorttion":false,"inviterId":"`+taskIdArr[0]+`","taskId":"`+inviterIdArr[0]+`"}`
 		debugLog(`【debug】 这是你第 ${_num} 账号信息: ${qcsAuthorizationCk} `);
 		await start();
 		
 	}
 	await SendMsg(msg);
 })()
-	.catch((e) => $.logErr(e))
-	.finally(() => $.done());
+	。catch((e) => $.logErr(e))
+	。finally(() => $.done());
 
 async function start() {
 	console.log("\n ===开始  =====");
@@ -72,7 +72,7 @@ async function GetSharingLinks() {
 	//let ts = ts13();
 	//let _data = `/api/user_mumber/account_detail&&${qcsAuthorizationCk[0]}&&${qcsAuthorizationCk[1]}&&${ts}&&${salt}&&3`;
 	//let sign = sha256_Encrypt(_data);
-	let options = { method: 'Get', url: `${hostname}/invitefriends/popSecond`, headers: { 'Connection': 'keep-alive','authorizer-appid': 'wx1ffbd6927043dff7','openId': 'o_DpX4-2hX2pFcchqCs0XFeby0eo','unionId': qcsunionIdCk[0], 'content-type': 'application/json','Authorization': qcsAuthorizationCk[0], 'miniProgramVersion': '1.0.0', 'Accept-Encoding': 'gzip,compress,br,deflate', 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/4G Language/zh_CN', 'Host': host, }, };
+	let options = { method: 'Get', url: `${hostname}/invitefriends/popSecond`, headers: { 'Connection': 'keep-alive','authorizer-appid': 'wx1ffbd6927043dff7','openId': 'o_DpX4-2hX2pFcchqCs0XFeby0eo','unionId': qcsunionIdCk[0], 'content-type': 'application/json','Authorization': qcsAuthorizationCk[0], 'miniProgramVersion': '1.0.0', 'Accept-Encoding': 'gzip,compress,br,deflate', 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40(0x18002831) NetType/4G Language/zh_CN'， 'Host': host, }, };
 	let result = await httpRequest(options, `获取分享链接`);
 	if (result.code == 0) {
 		//DoubleLog(`\n 账号:${result.data.rst.niqcsAuthorizationCk_name}，手机号: ${result.data.rst.mobile} , 积分 ${result.data.rst.total_integral} , 等级 ${result.data.rst.grade} ${result.data.rst.grade_name}`);
