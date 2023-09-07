@@ -129,7 +129,7 @@ async function taskUrl() {
             data = JSON.parse(data)
 			//console.log(optionss)
 			//console.log(data.errorMsg)
-			DoubleLog(`助力结果：`+data.errorMsg);
+			DoubleLog(`助力结果：`+data);
           }
         }
       } catch (e) {
@@ -139,7 +139,7 @@ async function taskUrl() {
       }
     })//$.post(), (err, resp, data)
 	})//return new Promise(async resolve => {
-}//最后的大括号GET https://mystore-01api.watsonsvip.com.cn/cloudapi/v2/scrollBanner/get HTTP/1.1
+}
 
 
 // #region *************************************************************  固定代码  *************************************************************
