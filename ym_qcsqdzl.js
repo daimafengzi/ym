@@ -49,6 +49,7 @@ async function tips(qcsAuthorizationArr) {
 		qcsunionIdCk = qcsunionIdArr[index].split("&");
 		//console.log(qcsAuthorizationCk);
 		//console.log(qcsunionIdCk);
+		taskIdinviterId=`{"unionId":"`+qcsunionIdCk[index]+`","isSorttion":false,"inviterId":"`+taskIdArr[0]+`","taskId":"`+inviterIdArr[0]+`"}`
 		debugLog(`【debug】 这是你第 ${_num} 账号信息: ${qcsAuthorizationCk} `);
 		await start();
 		
@@ -63,7 +64,7 @@ async function start() {
 	msg += `\n =====开始 =====`;
 	await wait(2);
 	await GetSharingLinks();
-	taskIdinviterId=`{"unionId":"`+qcsunionIdCk[0]+`","isSorttion":false,"inviterId":"`+taskIdArr[0]+`","taskId":"`+inviterIdArr[0]+`"}`
+	
 	//console.log(taskIdinviterId);
 	DoubleLog(`助力信息：`+taskIdinviterId);
 }
