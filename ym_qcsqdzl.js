@@ -79,12 +79,15 @@ async function GetSharingLinks() {
 		//console.log("\n ===签到===");
 		taskId = result.result.taskId;
 		inviterId=result.result.inviterId
-		DoubleLog(`助力taskId：`+taskId);
-		DoubleLog(`助力inviterId：`+inviterId);
+		//DoubleLog(`助力taskId：`+taskId);
+		//DoubleLog(`助力inviterId：`+inviterId);
 		taskIdArr.push(taskId);
 		inviterIdArr.push(inviterId);
 		taskIdinviterId=`{"unionId":"`+qcsunionIdCk[0]+`","isSorttion":false,"inviterId":"`+inviterId+`","taskId":"`+taskId+`"}`
 		//console.log(inviterIdArr);
+		DoubleLog(`助力unionId：`+qcsunionIdCk[0]);
+		DoubleLog(`助力taskId：`+taskId);
+		DoubleLog(`助力inviterId：`+inviterId);
 		await wait(3);
 		await taskUrl();
 		//console.log(result);
@@ -130,8 +133,8 @@ async function taskUrl() {
             data = JSON.parse(data)
 			//console.log(optionss)
 			//console.log(data.errorMsg)
-			DoubleLog(`助力结果：`+data.errorMsg);
-			console.log(`助力结果：`+JSON.stringify(data))
+			DoubleLog(`提交的body：`+taskIdinviterId);
+			DoubleLog(`助力结果：`+JSON.stringify(data))
           }
         }
       } catch (e) {
