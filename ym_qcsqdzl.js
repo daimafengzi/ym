@@ -90,7 +90,6 @@ async function GetSharingLinks() {
 		DoubleLog(`助力taskId：`+taskId);
 		DoubleLog(`\n----------------------------\n`);
 		DoubleLog(`助力inviterId：`+inviterId);
-		DoubleLog(`\n----------------------------\n`);
 		await wait(3);
 		await taskUrl();
 		//console.log(result);
