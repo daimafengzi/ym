@@ -35,8 +35,8 @@ cron：0 7-23/3 * * *
 
 
 money_Withdrawal = 0  # 提现开关 1开启 0关闭
-UA = "" #抓包获取User-Agent(🔔必填)
-key = ""  # (🔔必填) key参数为pushplus的token口令，或企业微信webhook机器人后面的 key，用于推送接收检测文章
+UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.44(0x18002c12) NetType/4G Language/zh_CN" #抓包获取User-Agent(🔔必填)
+key = "4f79a533534c495a8ff54577f717d6db"  # (🔔必填) key参数为pushplus的token口令，或企业微信webhook机器人后面的 key，用于推送接收检测文章
 
 
 
